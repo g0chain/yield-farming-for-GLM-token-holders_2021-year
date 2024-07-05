@@ -1,0 +1,34 @@
+{
+  "name": "GLM-stake-pool",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test ./test/test-local/*",
+    "test:stake": "truffle test ./test/test-local/GLMStakePool.test.js",
+    "compile:local": "truffle compile --reset --network local",
+    "migrate:local": "truffle migrate --reset --network local",
+    "console:ropsten": "truffle console --network ropsten",
+    "compile:ropsten": "truffle compile --reset --network ropsten",
+    "migrate:ropsten": "truffle migrate --reset --network ropsten",
+    "test:ropsten": "truffle test ./test/test-ropsten/* --network ropsten",
+    "script:ropsten": "node ./scripts/scripts-ropsten/CoveredYieldBearingToken.script.js --network ropsten",
+    "console:rinkeby": "truffle console --network rinkeby",
+    "compile:rinkeby": "truffle compile --reset --network rinkeby",
+    "migrate:rinkeby": "truffle migrate --reset --network rinkeby",
+    "test:rinkeby": "truffle test ./test/test-rinkeby/* --network rinkeby",
+    "script:rinkeby": "node ./scripts/scripts-rinkeby/CoveredYieldBearingToken.script.js --network rinkeby",
+    "start-blank": "rm -rf client/src && cp -rf barebones/src client/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.1",
+    "@truffle/hdwallet-provider": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "eth-block-tracker": "^4.4.3",
+    "ethereumjs-tx": "^2.1.2"
+  },
+  "devDependencies": {}
+}
